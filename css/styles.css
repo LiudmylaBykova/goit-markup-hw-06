@@ -102,7 +102,8 @@ img {
 }
 
 .nav-list {
-    display: flex;
+    display: none;
+    /* display: flex; */
     gap: 40px;
 }
 
@@ -187,7 +188,8 @@ img {
 }
 
 .header-address {
-    display: flex;
+    display: none;
+    /* display: flex; */
     gap: 40px;
 }
 
@@ -896,6 +898,10 @@ img {
     }
 
     /* Header-section */
+    .nav-list {
+        display: flex;
+    }
+
     .header-address {
         display: inline-block;
     }
@@ -905,6 +911,7 @@ img {
         line-height: 1.16;
         margin-bottom: 12px;
     }
+
 
     /* Hero-section */
     .hero-title {
@@ -944,8 +951,6 @@ img {
     .portfolio-list {
         column-gap: 24px;
         row-gap: 48px;
-        /* gap: 72px 24px; */
-        /* gap: 48px 24px; */
     }
 
     .portfolio-item {
@@ -1001,6 +1006,10 @@ img {
     }
 
     /* header-section */
+    .nav-list {
+        display: flex;
+    }
+
     .header-address {
         display: flex;
         gap: 40px;
