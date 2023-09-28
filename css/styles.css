@@ -278,12 +278,10 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 72px;
-    /* gap: 24px; */
 }
 
 .advantages-item {
     flex-basis: 100%;
-    /* width: calc((100% - 72px)/4); */
 }
 
 .advantages-item-icon {
@@ -357,10 +355,6 @@ img {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.team-item-img {
-    /* margin: 0 auto; */
-}
-
 .team-name {
     color: var(--c-master);
     font-size: 20px;
@@ -415,8 +409,6 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-
 .team-socials-item-icon {
     fill: var(--c-background-middle);
 }
@@ -426,8 +418,8 @@ img {
     background-color: var(--c-brand-pres);
 }
 
-
 /*END Our team section styles*/
+
 
 /*Portfolio section styles*/
 
@@ -445,12 +437,14 @@ img {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
+    gap: 48px;
+    /* column-gap: 24px;
+    row-gap: 48px; */
 }
 
 .portfolio-item {
-    width: calc((100% - 48px)/3);
+    flex-basis: 100%;
+    /* width: calc((100% - 48px)/3); */
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -485,6 +479,8 @@ img {
 }
 
 .portfolio-card {
+    /* width: 100%; */
+
     border: 1px solid var(--c-accent);
     background: var(--c-background-light);
     border-top: none;
@@ -510,21 +506,33 @@ img {
 
 /* Footer styles */
 .footer {
+    width: 100%;
+
+
     background-color: var(--c-master);
     padding: 100px 0;
 }
 
 .footer-container {
-    display: flex;
-    align-items: baseline;
+
+
+    /* display: flex; */
+    /* align-items: baseline; */
 
 }
 
 .footer-logo-container {
-    margin-right: 120px;
+    text-align: center;
+    margin-bottom: 72px;
+
+
+    /* margin-right: 120px; */
 }
 
 .footer-logo-left {
+
+
+
     color: var(--c-brand);
     font-family: Raleway, sans-serif;
     font-size: 18px;
@@ -546,6 +554,10 @@ img {
 }
 
 .footer-text {
+    text-align: left;
+
+
+
     max-width: 264px;
     color: var(--c-background-middle);
     font-size: 16px;
@@ -554,8 +566,8 @@ img {
 }
 
 .footer-socials {
+    text-align: center;
     display: block;
-    margin-right: 80px;
 }
 
 .footer-socials-text {
@@ -568,6 +580,11 @@ img {
 }
 
 .footer-socials-menu {
+    justify-content: center;
+    margin-bottom: 72px;
+
+
+
     display: flex;
     gap: 16px;
 }
@@ -604,6 +621,11 @@ img {
 }
 
 .footer-subscribe {
+    justify-content: center;
+
+
+    display: flex;
+    align-items: flex-end;
     color: var(--c-background-light);
     font-size: 16px;
     font-weight: 500;
@@ -613,6 +635,10 @@ img {
 }
 
 .footer-subscribe-input {
+    margin-bottom: 16px;
+
+
+
     width: 264px;
     height: 40px;
     color: var(--c-background-light);
@@ -633,12 +659,6 @@ img {
 .footer-subscribe-input:focus {
     outline: none;
     border-color: var(--c-brand);
-}
-
-
-.footer-subscribe {
-    display: flex;
-    align-items: flex-end;
 }
 
 .footer-subscrybe-button {
@@ -674,8 +694,12 @@ img {
 
 .footer-subscribe-form {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 24px; */
 }
+
+
 
 /* Modal */
 
@@ -892,7 +916,7 @@ img {
         max-width: 768px;
     }
 
-    /* Advantages */
+    /* Advantages-section */
     .advantages-list {
         gap: 72px 24px;
     }
@@ -905,7 +929,7 @@ img {
         text-align: left;
     }
 
-    /* Team */
+    /* Team-section */
     .team-container {
         padding-left: 108px;
         padding-right: 108px;
@@ -918,6 +942,24 @@ img {
     .team-item {
         flex-basis: calc((100% - 24px)/2);
     }
+
+    /* Portfolio-section */
+    .portfolio-list {
+        column-gap: 24px;
+        row-gap: 48px;
+        /* gap: 72px 24px; */
+
+    }
+
+    .portfolio-item {
+        flex-basis: calc((100% - 24px)/2);
+    }
+
+    /* Footer-section */
+
+
+
+
 }
 
 
@@ -931,7 +973,7 @@ img {
         padding: 0 15px;
     }
 
-    /* Advantages */
+    /* Advantages-section */
     .advantages-list {
         gap: 24px;
     }
@@ -950,8 +992,7 @@ img {
         font-weight: 400;
     }
 
-    /* Team */
-
+    /* Team-section */
     .team-list {
         gap: 24px;
     }
@@ -959,4 +1000,43 @@ img {
     .team-item {
         flex-basis: calc((100% - 72px)/4);
     }
+
+    /* Portfolio-section */
+    .portfolio-item {
+        width: calc((100% - 48px)/3);
+    }
+
+    .portfolio-list {
+        column-gap: 24px;
+        row-gap: 48px;
+        /* gap: 48px 24px; */
+    }
+
+    /* Footer-section */
+    .footer-container {
+        display: flex;
+        align-items: baseline;
+
+    }
+
+    .footer-logo-container {
+        text-align: left;
+        margin-right: 120px;
+    }
+
+    .footer-socials {
+        text-align: left;
+        display: block;
+        margin-right: 80px;
+    }
+
+    .footer-subscribe {
+        justify-content: flex-start;
+    }
+
+    .footer-subscribe-form {
+        display: flex;
+        gap: 24px;
+    }
+
 }
