@@ -288,7 +288,8 @@ img {
 }
 
 .advantages-item-icon {
-    display: flex;
+    display: none;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     border: 1px solid var(--c-border);
@@ -909,9 +910,6 @@ img {
         flex-basis: calc((100% - 24px)/2);
     }
 
-    .advantages-item-icon {}
-
-
     .advantages-title {
         text-align: left;
     }
@@ -1000,6 +998,10 @@ img {
     /* Advantages-section */
     .advantages-list {
         gap: 24px;
+    }
+
+    .advantages-item-icon {
+        display: flex;
     }
 
     .advantages-item {
