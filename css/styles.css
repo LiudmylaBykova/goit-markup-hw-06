@@ -101,6 +101,22 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-right: 76px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .logo-left {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .logo-left {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 .logo-right {
@@ -115,21 +131,16 @@ img {
 }
 
 .nav-list {
-    display: none;
+    display: flex;
     gap: 40px;
 }
 
-@media screen and (min-width:768px) {
+@media only screen and (max-width:767.98px) {
     .nav-list {
-        display: flex;
+        display: none;
     }
 }
 
-@media screen and (min-width:1158px) {
-    .nav-list {
-        display: flex;
-    }
-}
 
 .current {
     position: relative;
@@ -260,6 +271,22 @@ img {
 .address-type:focus {
     color: var(--c-brand-pres);
 }
+
+.header-menu-btn {
+    min-width: 24px;
+    min-height: 24px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .header-menu-btn {
+        display: none;
+    }
+}
+
+
 
 /*END Header styles*/
 
@@ -396,6 +423,7 @@ img {
     padding: 24px 100px;
 }
 
+
 @media screen and (min-width: 1158px) {
     .advantages-item-icon {
         display: flex;
@@ -460,7 +488,12 @@ img {
     }
 }
 
-@media screen and (min-width: 1158px) {}
+@media screen and (min-width: 1158px) {
+    .team-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
 
 .team-title {
     color: var(--c-master);
@@ -990,13 +1023,20 @@ img {
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     padding: 72px 24px 24px 24px;
-    min-width: 408px;
-    min-height: 584px;
+    min-width: 288px;
+    min-height: 623px;
     overflow-y: auto;
     border-radius: 4px;
     background: var(--c-modal-light);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+    .modal {
+        min-width: 408px;
+        min-height: 584px;
+    }
 }
 
 .modal-close {
@@ -1157,3 +1197,106 @@ img {
 }
 
 /* END Modal */
+
+/* Mobile-menu */
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    padding: 72px 16px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c-background-light);
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.mobile-menu-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(46, 47, 66, 0.10);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu-icon {
+    fill: var(--c-master);
+}
+
+.mobile-menu-list {
+    margin-bottom: auto;
+}
+
+.mobile-menu-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.mobile-menu-link {
+    color: var(--c-master);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.mobile-menu-link.current-link {
+    color: var(--c-brand-pres);
+}
+
+.mobile-contacts {
+    margin-bottom: 48px;
+}
+
+.mobile-contacts-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.mobile-contacts-link {
+    color: var(--c-text);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+}
+
+.mobile-contacts-link.current-link {
+    color: var(--c-brand-pres);
+}
+
+.mobile-socials {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.mobile-socials-linc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--c-brand);
+    /* transition-property: background-color; */
+    /* transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.mobile-socials-icon {
+    fill: var(--c-background-middle);
+}
