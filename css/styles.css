@@ -1074,7 +1074,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
     min-width: 288px;
     min-height: 623px;
     overflow-y: auto;
@@ -1088,6 +1088,7 @@ img {
     .modal {
         min-width: 408px;
         min-height: 584px;
+        padding: 72px 24px 24px 24px;
     }
 }
 
@@ -1211,15 +1212,15 @@ img {
 .modal-checkbox {
     display: flex;
     margin-bottom: 24px;
+    align-items: center;
 }
-
 
 .modal-checkbox-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 16px;
-    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     fill: transparent;
@@ -1238,6 +1239,8 @@ img {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
 }
 
 .modal-checkbox-label-accent {
@@ -1246,6 +1249,7 @@ img {
     line-height: 1.16;
     letter-spacing: 0.04em;
     text-decoration-line: underline;
+    display: inline-block;
 }
 
 
@@ -1283,6 +1287,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    background-color: var(--c-background-light);
 }
 
 .mobile-menu-icon {
