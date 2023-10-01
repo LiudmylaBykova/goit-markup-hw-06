@@ -292,14 +292,59 @@ img {
 
 /*Hero section styles*/
 .hero-section {
-    max-width: 1440px;
+    /* max-width: 1440px; */
+    max-width: 320px;
+    max-height: 432px;
+    margin: 0 auto;
     background-color: var(--c-master);
-    padding: 188px 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/hero/hero-mobile.jpg);
+}
 
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-hero.jpg);
+@media only screen and (min-resolution: 192dpi) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-mobile@2x.jpg);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-section {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        max-width: 768px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-tab.jpg);
+    }
+}
+
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-tab@2x.jpg);
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .hero-section {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        max-width: 1158px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-desk.jpg);
+    }
+}
+
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero/hero-desk@2x.jpg);
+    }
 }
 
 .hero-title {
@@ -1202,6 +1247,7 @@ img {
     letter-spacing: 0.04em;
     text-decoration-line: underline;
 }
+
 
 /* END Modal */
 
